@@ -21,7 +21,7 @@ export class NovaCategoriaComponent implements OnInit {
     private categoriasService: CategoriasService,
     private router: Router,
     private snackBar: MatSnackBar
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.erros = [];

@@ -23,6 +23,7 @@ import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-ca
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatDialogModule,
     FormsModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSnackBarModule
   ],
   providers: [TiposService, CategoriasService, HttpClientModule],
   bootstrap: [AppComponent]

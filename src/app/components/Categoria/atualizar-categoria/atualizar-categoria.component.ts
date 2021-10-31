@@ -6,6 +6,7 @@ import { Categoria } from 'src/app/models/Categoria';
 import { Tipo } from 'src/app/models/Tipo';
 import { CategoriasService } from 'src/app/services/categorias.service';
 import { TiposService } from 'src/app/services/tipos.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-atualizar-categoria',
@@ -19,7 +20,13 @@ export class AtualizarCategoriaComponent implements OnInit {
   tipos: Tipo[];
   formulario: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private tiposService: TiposService, private categoriaSerivce: CategoriasService) { }
+  constructor(
+    private router: Router, 
+    private route: ActivatedRoute, 
+    private tiposService: TiposService, 
+    private categoriaSerivce: CategoriasService,
+    private snackBar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
     this.categoriaID = this.route.snapshot.params.id;
@@ -49,8 +56,13 @@ export class AtualizarCategoriaComponent implements OnInit {
   EnviarFormulario(): void {
     const categoria = this.formulario.value;
     this.categoriaSerivce.AtualziarCategoria(this.categoriaID, categoria).subscribe(resultado => {
-      this.router.navigate(['categorias/listagemcategorias'])
-    })
+      this.router.navigate(['categorias/listagemcategorias']);
+      this.snackBar.open(resultado.mensagem, null, {
+        duration: 2000,
+        horizontalPosition: 'right',
+        verticalPosition: 'top'
+      });
+    });
   }
 
 }
