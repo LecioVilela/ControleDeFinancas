@@ -69,7 +69,7 @@
         <div>
           <mat-form-field>
             <mat-label>Selecione o tipo adequado</mat-label>
-            <mat-select formControlName="tipoId" rquired>
+            <mat-select formControlName="tipoId" required>
               <mat-option *ngFor="let tipo of tipos" [value]="tipo.tipoId">{{
                                 tipo.nome
                                 }}</mat-option>

@@ -53,7 +53,7 @@ export class ListagemCategoriasComponent implements OnInit {
       data: {
         categoriaID: categoriaID,
         nome: nome
-      }
+      },
     }).afterClosed().subscribe(resultado => {
       if (resultado === true) {
         this.categoriasService.PegarTodos().subscribe((dados) => {
