@@ -14,7 +14,7 @@
 
 .mat-form-field.mat-form.field{
     width: 500px;
-    
+
 }
 
 .cabecalho {
@@ -34,4 +34,18 @@
 
 .autoCompleteInput {
     width: 500px;
+}
+
+.textoErros {
+  font-weight: 900;
+  color: #c0392b;
+}
+
+.divErros {
+  padding: 20px;
+}
+
+.cardErros {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
