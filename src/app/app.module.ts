@@ -1,3 +1,4 @@
+import { FuncoesService } from './services/funcoes.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -55,7 +56,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSnackBarModule,
     MatProgressBarModule
   ],
-  providers: [TiposService, CategoriasService, HttpClientModule],
+  providers: [TiposService, CategoriasService, FuncoesService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
